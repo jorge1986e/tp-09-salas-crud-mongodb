@@ -1,0 +1,204 @@
+:root {
+  --azul: #184f95;
+  --azul-oscuro: #123c72;
+  --texto: #1f2933;
+  --fondo: #f6f8fb;
+  --borde: #c5cfdb;
+  --error: #b42318;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: var(--texto);
+  background: var(--fondo);
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+a {
+  color: var(--azul);
+}
+
+/* Encabezado */
+.encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border-bottom: 1px solid var(--borde);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.encabezado nav {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Pie */
+.pie {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  background: #fff;
+  border-top: 1px solid var(--borde);
+}
+
+.pie p {
+  margin: 0.25rem 0;
+}
+
+.pie .solicitud {
+  font-size: 0.75rem;
+  color: #6b7785;
+}
+
+/* Contenido */
+.seccion {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #52606d;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.tarjeta {
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+}
+
+.tarjeta h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.tarjeta p {
+  margin: 0.25rem 0;
+}
+
+.datos dt {
+  font-weight: bold;
+}
+
+.datos dd {
+  margin: 0 0 0.75rem;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Botones */
+.boton {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  font: inherit;
+  color: #fff;
+  background: var(--azul);
+  border: 2px solid var(--azul);
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background: var(--azul-oscuro);
+  border-color: var(--azul-oscuro);
+}
+
+.boton.secundario {
+  color: var(--azul);
+  background: #fff;
+}
+
+.boton.secundario:hover {
+  color: #fff;
+  background: var(--azul-oscuro);
+}
+
+/* Formulario */
+form {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 420px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.6rem;
+  font: inherit;
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+}
+
+form .boton {
+  justify-self: start;
+  margin-top: 0.5rem;
+}
+
+.error {
+  max-width: 420px;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  color: var(--error);
+  background: #fff;
+  border: 1px solid var(--error);
+  border-radius: 6px;
+}
+
+.error p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.error ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+/* Foco visible */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #f2a900;
+  outline-offset: 3px;
+}
